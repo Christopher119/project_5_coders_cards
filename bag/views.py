@@ -26,7 +26,6 @@ def add_to_bag(request, item_id):
 
     # overwrite bag item in session
     request.session['bag'] = bag
-    print(request.session['bag'])
 
     # redirect back to product detail view
     return redirect(redirect_url)
