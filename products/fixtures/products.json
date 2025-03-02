@@ -1,0 +1,522 @@
+[
+    {
+      "pk": 1,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454321",
+        "name": "HTML Booster Pack",
+        "description": "Standard Booster Pack for HTML Decks",
+        "price": 4.99,
+        "category": 1,
+        "rating": 4.6,
+        "image": "HTML-Booster-Pack.jpg"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454322",
+        "name": "CSS Booster Pack",
+        "description": "Standard Booster Pack for CSS Decks",
+        "price": 3.99,
+        "category": 2,
+        "rating": 4.3,
+        "image": "CSS-Booster-Pack.jpg"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454323",
+        "name": "JavaScript Booster Pack",
+        "description": "Standard Booster Pack for JavaScript Decks",
+        "price": 4.99,
+        "category": 3,
+        "rating": 4.2,
+        "image": "JavaScript-Booster-Pack.jpg"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454324",
+        "name": "Python Booster Pack",
+        "description": "Standard Booster Pack for Python Decks",
+        "price": 6.99,
+        "category": 4,
+        "rating": 4.1,
+        "image": "Python-Booster-Pack.jpg"
+      }
+    },
+    {
+      "pk": 5,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454325",
+        "name": "HTML Booster Pack Gold",
+        "description": "Gold Booster Pack for HTML Decks",
+        "price": 7.99,
+        "category": 1,
+        "rating": 4.4,
+        "image": "HTML-Gold-Pack.jpg"
+      }
+    },
+    {
+      "pk": 6,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454326",
+        "name": "CSS Booster Pack Gold",
+        "description": "Gold Booster Pack for CSS Decks",
+        "price": 6.99,
+        "category": 2,
+        "rating": 4.8,
+        "image": "CSS-Gold-Pack.jpg"
+      }
+    },
+    {
+      "pk": 7,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454327",
+        "name": "JavaScript Booster Pack Gold",
+        "description": "Gold Booster Pack for JavaScript Decks",
+        "price": 8.99,
+        "category": 3,
+        "rating": 4.2,
+        "image": "JavaScript-Gold-Pack.jpg"
+      }
+    },
+    {
+      "pk": 8,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454328",
+        "name": "Python Booster Pack Gold",
+        "description": "Gold Booster Pack for Python Decks",
+        "price": 9.99,
+        "category": 4,
+        "rating": 4.4,
+        "image": "Python-Gold-Pack.jpg"
+      }
+    },
+    {
+      "pk": 9,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454329",
+        "name": "HTML Booster Pack EX",
+        "description": "EX Booster Pack for HTML Decks",
+        "price": 9.99,
+        "category": 1,
+        "rating": 3.9,
+        "image": "HTML-EX-Pack.jpg"
+      }
+    },
+    {
+      "pk": 10,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454330",
+        "name": "CSS Booster Pack EX",
+        "description": "EX Booster Pack for CSS Decks",
+        "price": 8.99,
+        "category": 2,
+        "rating": 4.2,
+        "image": "CSS-EX-Pack.jpg"
+      }
+    },
+    {
+      "pk": 11,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454331",
+        "name": "JavaScript Booster Pack EX",
+        "description": "EX Booster Pack for JavaScript Decks",
+        "price": 11.99,
+        "category": 3,
+        "rating": 4.0,
+        "image": "JavaScript-EX-Pack.jpg"
+      }
+    },
+    {
+      "pk": 12,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454332",
+        "name": "Python Booster Pack EX",
+        "description": "EX Booster Pack for Python Decks",
+        "price": 13.99,
+        "category": 4,
+        "rating": 3.7,
+        "image": "Python-EX-Pack.jpg"
+      }
+    },
+    {
+      "pk": 13,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454333",
+        "name": "HTML Booster Pack - 5 Pack",
+        "description": "5 Booster Packs for HTML Decks. Save €5!",
+        "price": 19.99,
+        "category": 1,
+        "rating": 4.8,
+        "image": "HTML-5-Pack.jpg"
+      }
+    },
+    {
+      "pk": 14,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454334",
+        "name": "CSS Booster Pack - 5 Pack",
+        "description": "5 Booster Packs for CSS Decks. Save €5!",
+        "price": 14.99,
+        "category": 2,
+        "rating": 4.9,
+        "image": "CSS-5-Pack.jpg"
+      }
+    },
+    {
+      "pk": 15,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454335",
+        "name": "JavaScript Booster Pack - 5 Pack",
+        "description": "5 Booster Packs for JavaScript Decks. Save €5!",
+        "price": 19.99,
+        "category": 3,
+        "rating": 4.9,
+        "image": "JavaScript-5-Pack.jpg"
+      }
+    },
+    {
+      "pk": 16,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454336",
+        "name": "Python Booster Pack - 5 Pack",
+        "description": "5 Booster Packs for Python Decks. Save €5!",
+        "price": 29.99,
+        "category": 4,
+        "rating": 4.1,
+        "image": "Python-5-Pack.jpg"
+      }
+    },
+    {
+      "pk": 17,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454337",
+        "name": "HTML Gold Booster Pack - 5 Pack",
+        "description": "5 Gold Booster Packs for HTML Decks. Save €5!",
+        "price": 34.99,
+        "category": 1,
+        "rating": 4.0,
+        "image": "HTML-5-Gold-Pack.jpg"
+      }
+    },
+    {
+      "pk": 18,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454338",
+        "name": "CSS Gold Booster Pack - 5 Pack",
+        "description": "5 Gold Booster Packs for CSS Decks. Save €5!",
+        "price": 29.99,
+        "category": 2,
+        "rating": 4.3,
+        "image": "CSS-5-Gold-Pack.jpg"
+      }
+    },
+    {
+      "pk": 19,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454339",
+        "name": "JavaScript Gold Booster Pack - 5 Pack",
+        "description": "5 Gold Booster Packs for JavaScript Decks. Save €5!",
+        "price": 39.99,
+        "category": 3,
+        "rating": 4.6,
+        "image": "JavaScript-5-Gold-Pack.jpg"
+      }
+    },
+    {
+      "pk": 20,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454340",
+        "name": "Python Gold Booster Pack - 5 Pack",
+        "description": "5 Gold Booster Packs for Python Decks. Save €5!",
+        "price": 44.99,
+        "category": 4,
+        "rating": 3.9,
+        "image": "Python-5-Gold-Pack.jpg"
+      }
+    },
+    {
+      "pk": 21,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454341",
+        "name": "HTML Booster Pack EX - 5 Pack",
+        "description": "5 Booster Packs EX for HTML Decks. Save €5!",
+        "price": 44.99,
+        "category": 1,
+        "rating": 4.2,
+        "image": "HTML-5-EX-Pack.jpg"
+      }
+    },
+    {
+      "pk": 22,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454342",
+        "name": "CSS Booster Pack EX - 5 Pack",
+        "description": "5 Booster Packs EX for CSS Decks. Save €5!",
+        "price": 39.99,
+        "category": 2,
+        "rating": 4.1,
+        "image": "CSS-5-EX-Pack.jpg"
+      }
+    },
+    {
+      "pk": 23,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454343",
+        "name": "JavaScript Booster Pack EX - 5 Pack",
+        "description": "5 Booster Packs EX for JavaScript Decks. Save €5!",
+        "price": 54.99,
+        "category": 3,
+        "rating": 4.8,
+        "image": "JavaScript-5-EX-Pack.jpg"
+      }
+    },
+    {
+      "pk": 24,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454344",
+        "name": "Python Booster Pack EX - 5 Pack",
+        "description": "5 Booster Packs EX for Python Decks. Save €5!",
+        "price": 64.99,
+        "category": 4,
+        "rating": 4.3,
+        "image": "Python-5-EX-Pack.jpg"
+      }
+    },
+    {
+      "pk": 25,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454345",
+        "name": "HTML Deck",
+        "description": "Standard Deck for HTML.",
+        "price": 39.99,
+        "category": 1,
+        "rating": 3.8,
+        "image": "HTML-Deck.jpg"
+      }
+    },
+    {
+      "pk": 26,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454346",
+        "name": "CSS Deck",
+        "description": "Standard Deck for CSS.",
+        "price": 34.99,
+        "category": 2,
+        "rating": 3.6,
+        "image": "CSS-Deck.jpg"
+      }
+    },
+    {
+      "pk": 27,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454347",
+        "name": "JavaScript Deck",
+        "description": "Standard Deck for JavaScript.",
+        "price": 44.99,
+        "category": 3,
+        "rating": 3.9,
+        "image": "JavaScript-Deck.jpg"
+      }
+    },
+    {
+      "pk": 28,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454348",
+        "name": "Python Deck",
+        "description": "Standard Deck for Python.",
+        "price": 49.99,
+        "category": 4,
+        "rating": 3.2,
+        "image": "Python-Deck.jpg"
+      }
+    },
+    {
+      "pk": 29,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454349",
+        "name": "HTML Booster Deck",
+        "description": "Deck containing all popular cards for HTML players.",
+        "price": 29.99,
+        "category": 1,
+        "rating": 4.2,
+        "image": "HTML-Booster-Deck.jpg"
+      }
+    },
+    {
+      "pk": 30,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454350",
+        "name": "CSS Booster Deck",
+        "description": "Deck containing all popular cards for CSS players.",
+        "price": 24.99,
+        "category": 2,
+        "rating": 4.1,
+        "image": "CSS-Booster-Deck.jpg"
+      }
+    },
+    {
+      "pk": 31,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454351",
+        "name": "JavaScript Booster Deck",
+        "description": "Deck containing all popular cards for JavaScript players.",
+        "price": 29.99,
+        "category": 3,
+        "rating": 4.3,
+        "image": "JavaScript-Booster-Deck.jpg"
+      }
+    },
+    {
+      "pk": 32,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454352",
+        "name": "Python Booster Deck",
+        "description": "Deck containing all popular cards for Python players.",
+        "price": 39.99,
+        "category": 4,
+        "rating": 4.2,
+        "image": "Python-Booster-Deck.jpg"
+      }
+    },
+    {
+      "pk": 33,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454353",
+        "name": "HTML Deal Box",
+        "description": "Box containing 20 booster packs, a mixture of all HTML releases. Save €50!",
+        "price": 99.99,
+        "category": 6,
+        "rating": 4.6,
+        "image": "HTML-Deal-Box.jpg"
+      }
+    },
+    {
+      "pk": 34,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454354",
+        "name": "CSS Deal Box",
+        "description": "Box containing 20 booster packs, a mixture of all CSS releases. Save €30!",
+        "price": 99.99,
+        "category": 6,
+        "rating": 4.7,
+        "image": "CSS-Deal-Box.jpg"
+      }
+    },
+    {
+      "pk": 35,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454355",
+        "name": "JavaScript Deal Box",
+        "description": "Box containing 20 booster packs, a mixture of all JavaScript releases. Save €25!",
+        "price": 149.99,
+        "category": 6,
+        "rating": 4.6,
+        "image": "JavaScript-Deal-Box.jpg"
+      }
+    },
+    {
+      "pk": 36,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454356",
+        "name": "Python Deal Box",
+        "description": "Box containing 20 booster packs, a mixture of all Python releases. Save €55!",
+        "price": 149.99,
+        "category": 6,
+        "rating": 4.8,
+        "image": "Python-Deal-Box.jpg"
+      }
+    },
+    {
+      "pk": 37,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454357",
+        "name": "Card Sleeves",
+        "description": "Standard Card Sleeves",
+        "price": 2.99,
+        "category": 5,
+        "rating": 3.0,
+        "image": "Card-Sleeve.jpg"
+      }
+    },
+    {
+      "pk": 38,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454358",
+        "name": "Playmat",
+        "description": "Standard Playmat for Card Coder",
+        "price": 4.99,
+        "category": 5,
+        "rating": 2.5,
+        "image": "Playmat.jpg"
+      }
+    },
+    {
+      "pk": 39,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454359",
+        "name": "Card Binder",
+        "description": "New! Card Binder for your rare cards!",
+        "price": 9.99,
+        "category": 7,
+        "rating": 4.0,
+        "image": "Playmat.jpg"
+      }
+    },
+    {
+      "pk": 40,
+      "model": "products.product",
+      "fields": {
+        "sku": "123454360",
+        "name": "Glossy Card Sleeve",
+        "description": "New! Card sleeves with a unique glossy finish for your rarest cards!",
+        "price": 4.99,
+        "category": 7,
+        "rating": 4.2,
+        "image": "Playmat.jpg"
+      }
+    }
+  ]
