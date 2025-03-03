@@ -1,1 +1,1 @@
-web: gunicorn project_5_coders_cards.wsgi:application
+web: gunicorn coders_cards.wsgi:application
