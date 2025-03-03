@@ -13,6 +13,14 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 
+# imports needed for django-countries to not throw a
+# BlankChoiceIterator error when accessing profile page
+# https://stackoverflow.com/questions/77667419/problem-after-upgrading-to-django-5-0-attributeerror-blankchoiceiterator-obj
+from django_countries.widgets import LazyChoicesMixin
+
+LazyChoicesMixin.get_choices = lambda self: self._choices
+LazyChoicesMixin.choices = property(LazyChoicesMixin.get_choices, LazyChoicesMixin.set_choices)
+
 if os.path.isfile('env.py'):
     import env
 
