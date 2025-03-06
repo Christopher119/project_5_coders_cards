@@ -11,6 +11,7 @@ class BlogPost (models.Model):
     author = models.ForeignKey(UserProfile,
                                on_delete=models.SET_NULL)
     title = models.CharField(max_length=254, null=False, blank=False)
+    slug = models.SlugField(max_length=254, unique=True)
     blog_content = models.TextField(null=False, blank=False)
     posted = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
