@@ -102,7 +102,7 @@ def delete_blog_post(request, slug):
 
 # -------------------COMMENT VIEWS-------------------
 @login_required
-def add_blog_post(request):
+def add_comment(request):
     """ Add a new comment """
     if request.method == 'POST':
         form = BlogForm(request.POST, request.FILES)
