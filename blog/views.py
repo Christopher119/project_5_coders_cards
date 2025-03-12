@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from .models import BlogPost, Comment
+from .forms import BlogForm, CommentForm
 
 # Create your views here.
 
@@ -42,7 +43,7 @@ def add_blog_post(request):
     if request.method == 'POST':
         form = BlogForm(request.POST, request.FILES)
         if form.is_valid():
-            blogpost = form.save()
+            form.save()
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('blog'))
         else:
@@ -105,17 +106,17 @@ def delete_blog_post(request, slug):
 def add_comment(request):
     """ Add a new comment """
     if request.method == 'POST':
-        form = BlogForm(request.POST, request.FILES)
+        form = CommentForm(request.POST, request.FILES)
         if form.is_valid():
-            blogpost = form.save()
+            form.save()
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('blog'))
         else:
             messages.error(request, 'Failed to add blog post. Please ensure the form is valid.')
     else:
-        form = BlogForm()
+        form = CommentForm()
 
-    template = 'blog/add_blog_post.html'
+    template = 'blog/add_comment.html'
     context = {
         'form': form,
     }
@@ -124,7 +125,7 @@ def add_comment(request):
 
 
 @login_required
-def edit_blog_post(request, slug, comment_id):
+def edit_comment(request, slug, comment_id):
     """ Edit a blog post """
     blog_post = get_object_or_404(BlogPost, slug=slug)
     comment = get_object_or_404(Comment, pk=comment_id)
@@ -135,11 +136,17 @@ def edit_blog_post(request, slug, comment_id):
         messages.add_message(request, messages.ERROR,
                              'You can only edit your own reviews!')
 
+    template = 'blog/edit_comment.html'
+    context = {
+        'comment': comment,
+        'blog_post': blog_post,
+    }
+
     return render(request, template, context)
 
 
 @login_required
-def delete_blog_post(request, slug, comment_id):
+def delete_comment(request, slug, comment_id):
     """ Delete a comment from a blog post """
     blog_post = get_object_or_404(BlogPost, slug=slug)
     comment = get_object_or_404(Comment, pk=comment_id)
@@ -149,3 +156,5 @@ def delete_blog_post(request, slug, comment_id):
     else:
         messages.add_message(request, messages.ERROR,
                              'You can only delete your own reviews!')
+
+    return redirect(reverse('product_detail', args=[blog_post.slug]))
