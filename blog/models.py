@@ -8,7 +8,7 @@ APPROVAL = ((0, "Awaiting Moderation"), (1, "Approved"))
 
 class BlogPost (models.Model):
 
-    author = models.ForeignKey(UserProfile,
+    author = models.ForeignKey(UserProfile, null=True,
                                on_delete=models.SET_NULL)
     title = models.CharField(max_length=254, null=False, blank=False)
     slug = models.SlugField(max_length=254, unique=True)
@@ -24,7 +24,8 @@ class Comment (models.Model):
 
     commenter = models.ForeignKey(UserProfile,
                                   on_delete=models.CASCADE)
-    blog_post = models.ForeignKey(BlogPost, null=False, blank=False)
+    blog_post = models.ForeignKey(BlogPost, null=False, blank=False,
+                                  on_delete=models.CASCADE)
     comment_content = models.TextField(null=False, blank=False)
     posted = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
