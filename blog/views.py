@@ -30,7 +30,7 @@ def blog_post(request, slug):
         'blog_post': blog_post,
     }
 
-    return render(request, 'products/product_detail.html', context)
+    return render(request, 'blog/blog_post.html', context)
 
 
 # -------------------BLOG POST VIEWS-------------------
@@ -75,7 +75,7 @@ def edit_blog_post(request, slug):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('blog'))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update blog post. Please ensure the form is valid.')
     else:
         form = BlogForm(instance=blog_post)
         messages.info(request, f'You are editing {blog_post.title}')

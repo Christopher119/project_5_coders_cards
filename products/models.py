@@ -45,4 +45,4 @@ class Review (models.Model):
     approved = models.IntegerField(choices=APPROVAL, default=0)
 
     def __str__(self):
-        return f'Comment posted by: {self.commenter}'
+        return f'Comment posted by: {self.reviewer}'
