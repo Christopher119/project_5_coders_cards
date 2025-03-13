@@ -3,13 +3,27 @@ from .models import BlogPost, Comment
 
 
 # registering a class of BlogAdmin
-@admin.register(BlogPost)
 class BlogPostAdmin(admin.ModelAdmin):
 
     prepopulated_fields = {'slug': ('title',)}
+    list_display = (
+        'author',
+        'title',
+        'posted',
+        'updated',
+    )
+    ordering = ('posted',)
+
+
+class CommentAdmin(admin.ModelAdmin):
+
+    list_display = (
+        'commenter',
+        'blog_post',
+        'approved',
+    )
 
 
 # Register your models here.
-admin.site.unregister(BlogPost)
 admin.site.register(BlogPost, BlogPostAdmin)
-admin.site.register(Comment)
+admin.site.register(Comment, CommentAdmin)
