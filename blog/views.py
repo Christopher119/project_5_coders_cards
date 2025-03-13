@@ -1,6 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
-from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from .models import BlogPost, Comment
 from .forms import BlogForm, CommentForm
@@ -97,7 +96,8 @@ def edit_blog_post(request, slug):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('blog'))
         else:
-            messages.error(request, 'Failed to update blog post. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update blog post. '
+                           'Please ensure the form is valid.')
     else:
         form = BlogForm(instance=blog_post)
         messages.info(request, f'You are editing {blog_post.title}')
