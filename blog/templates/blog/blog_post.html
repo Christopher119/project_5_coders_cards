@@ -27,7 +27,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-7 card mb-4 mt-3 review-box">
+            <div class="col-md-7 card mb-4 mt-3 comment-box">
                 <h3>Comments:</h3>
                 <div class="card-body">
                     {% for c in comment %}
@@ -40,11 +40,27 @@
                         <p class="approval">This comment is awaiting approval</p>
                         {% endif %}
                         {% if user.is_authenticated and c.commenter == user %}
-                        <button class="btn btn-edit" data-review_id="{{ review.id }}">Edit</button>
-                        <button class="btn btn-delete" data-review_id="{{ review.id }}">Delete</button>
+                        <button class="btn btn-edit" data-comment_id="{{ c.id }}">Edit</button>
+                        <button class="btn btn-delete" data-comment_id="{{ c.id }}">Delete</button>
                         {% endif %}
                     </div>
                     {% endfor %}
+                </div>
+            </div>
+            <!-- New Comment Form -->
+            <div class="col-md-4 card mb-4 mt-3 comment-box">
+                <div class="card-body">
+                    {% if user.is_authenticated %}
+                    <h3>Leave a comment:</h3>
+                    <p>Posting as: {{ user.username }}</p>
+                    <form id="commentForm" method="post" style="margin-top: 1.3em;">
+                        {{ comment_form | crispy }}
+                        {% csrf_token %}
+                        <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    </form>
+                    {% else %}
+                    <p>Log in to leave a comment</p>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -52,4 +68,5 @@
 {% endblock %}
 
 {% block postloadjs %}
+<script src="{% static 'js/comments.js' %}"></script>
 {% endblock %}

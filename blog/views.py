@@ -26,10 +26,29 @@ def blog_post(request, slug):
 
     blog_post = get_object_or_404(BlogPost, slug=slug)
     comment = blog_post.comment.all()
+    comment_form = CommentForm()
+
+    if request.method == 'POST':
+        comment_form = CommentForm(request.POST)
+        if comment_form.is_valid():
+            c = comment_form.save(commit=False)
+            # could not figure out how to successfully assign UserProfile data
+            # when previous lessons only used default django user
+            # comment.commenter = request.user
+            c.blog_post = blog_post
+            c.save()
+            messages.success(request, 'Successfully added comment!')
+            return redirect(reverse('blog'))
+        else:
+            messages.error(request, 'Failed to add comment. '
+                           'Please ensure the form is valid.')
+    else:
+        comment_form = CommentForm()
 
     context = {
         'blog_post': blog_post,
         'comment': comment,
+        'comment_form': comment_form,
     }
 
     return render(request, 'blog/blog_post.html', context)

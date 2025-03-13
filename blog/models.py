@@ -27,9 +27,9 @@ class BlogPost (models.Model):
 
 class Comment (models.Model):
 
-    commenter = models.ForeignKey(UserProfile,
+    commenter = models.ForeignKey(UserProfile, null=True,
                                   on_delete=models.CASCADE)
-    blog_post = models.ForeignKey(BlogPost, null=False, blank=False,
+    blog_post = models.ForeignKey(BlogPost, null=True, blank=False,
                                   related_name="comment",
                                   on_delete=models.CASCADE)
     comment_content = models.TextField(null=False, blank=False)
