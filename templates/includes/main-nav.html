@@ -36,6 +36,16 @@
                 <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="dropdown-item">All Specials</a>
             </div>
         </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="blog-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Blog
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="blog-link">
+                <a href="{% url 'blog' %}" class="dropdown-item">Blog Posts</a>
+            </div>
+        </li>
+        
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black" href="#" id="promotion-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Our Links

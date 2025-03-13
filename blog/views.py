@@ -12,6 +12,7 @@ def blog(request):
     """ A view to show all blog posts"""
 
     blog_posts = BlogPost.objects.all()
+    blog_posts = blog_posts.order_by('updated')
 
     context = {
         'blog_posts': blog_posts,
