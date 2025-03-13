@@ -46,12 +46,14 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request, "You didn't enter "
+                               "any search criteria!")
                 return redirect(reverse('products'))
 
             # checking if search criteria is contained in either
             # name or description of products
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query) | Q(
+                description__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -79,7 +81,7 @@ def product_detail(request, product_id):
             r = review_form.save(commit=False)
             # could not figure out how to successfully assign UserProfile data
             # when previous lessons only used default django user
-            # review.reviewer = request.user
+            # by using review.reviewer = request.user
             r.product = product
             r.save()
             messages.success(request, 'Successfully added review!')
@@ -141,7 +143,8 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update product. '
+                           'Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
