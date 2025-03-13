@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import BlogPost, Comment
 
 
-# registering a class of BookAdmin
+# registering a class of BlogAdmin
 @admin.register(BlogPost)
 class BlogPostAdmin(admin.ModelAdmin):
 
