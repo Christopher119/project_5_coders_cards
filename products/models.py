@@ -37,9 +37,11 @@ class Product (models.Model):
 
 class Review (models.Model):
 
-    reviewer = models.ForeignKey(UserProfile,
+    reviewer = models.ForeignKey(UserProfile, null=True,
+                                 related_name="review",
                                  on_delete=models.CASCADE)
-    product = models.ForeignKey(Product, null=False, blank=False,
+    product = models.ForeignKey(Product, null=True, blank=False,
+                                related_name="review",
                                 on_delete=models.CASCADE)
     review_content = models.TextField(null=False, blank=False)
     approved = models.IntegerField(choices=APPROVAL, default=0)

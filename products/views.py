@@ -4,7 +4,7 @@ from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from .models import Product, Category
 from django.db.models.functions import Lower
-from .forms import ProductForm
+from .forms import ProductForm, ReviewForm
 
 # Create your views here.
 
@@ -70,9 +70,30 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
+    review = product.review.all()
+    review_form = ReviewForm()
+
+    if request.method == 'POST':
+        review_form = ReviewForm(request.POST)
+        if review_form.is_valid():
+            r = review_form.save(commit=False)
+            # could not figure out how to successfully assign UserProfile data
+            # when previous lessons only used default django user
+            # review.reviewer = request.user
+            r.product = product
+            r.save()
+            messages.success(request, 'Successfully added review!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to add review. '
+                           'Please ensure the form is valid.')
+    else:
+        review_form = ReviewForm()
 
     context = {
         'product': product,
+        'review': review,
+        'review_form': review_form,
     }
 
     return render(request, 'products/product_detail.html', context)

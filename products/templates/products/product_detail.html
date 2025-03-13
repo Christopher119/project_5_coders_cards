@@ -101,6 +101,40 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-7 card mb-4 mt-3 review-box">
+            <h3>Reviews:</h3>
+            <div class="card-body">
+                {% for r in review %}
+                <div class="p-2">
+                    <p class="font-weight-bold">{{ r.reviewer }} wrote:</p>
+                    <div id="r{{ r.id }}">
+                        {{ r.review_content | linebreaks }}
+                    </div>
+                    <button class="btn btn-edit" data-r_id="{{ r.id }}">Edit</button>
+                    <button class="btn btn-delete" data-r_id="{{ r.id }}">Delete</button>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- New Review Form -->
+        <div class="col-md-4 card mb-4 mt-3 review-box">
+            <div class="card-body">
+                {% if user.is_authenticated %}
+                <h3>Leave a review:</h3>
+                <p>Posting as: {{ user.username }}</p>
+                <form id="reviewForm" method="post" style="margin-top: 1.3em;">
+                    {{ review_form | crispy }}
+                    {% csrf_token %}
+                    <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+                </form>
+                {% else %}
+                <p>Log in to leave a review</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block postloadjs%}
