@@ -25,9 +25,11 @@ def blog_post(request, slug):
     """ A view to show individual blog posts """
 
     blog_post = get_object_or_404(BlogPost, slug=slug)
+    comment = blog_post.comment.all()
 
     context = {
         'blog_post': blog_post,
+        'comment': comment,
     }
 
     return render(request, 'blog/blog_post.html', context)

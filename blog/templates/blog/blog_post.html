@@ -26,6 +26,28 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-7 card mb-4 mt-3 review-box">
+                <h3>Comments:</h3>
+                <div class="card-body">
+                    {% for c in comment %}
+                    <div class="p-2">
+                        <p class="font-weight-bold">{{ c.commenter }} wrote:</p>
+                        <div id="c{{ c.id }}">
+                            {{ c.comment_content | linebreaks }}
+                        </div>
+                        {% if not c.approved and c.commenter == user %}
+                        <p class="approval">This comment is awaiting approval</p>
+                        {% endif %}
+                        {% if user.is_authenticated and c.commenter == user %}
+                        <button class="btn btn-edit" data-review_id="{{ review.id }}">Edit</button>
+                        <button class="btn btn-delete" data-review_id="{{ review.id }}">Delete</button>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}
 
