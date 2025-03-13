@@ -7,14 +7,14 @@ body {
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
-    font-family: 'Lato';
+    font-family: 'Lato', sans-serif;
 }
 
 .body-overlay {
-    background-color: rgba(255,255,255,0.8); /* Black background with opacity */
+    background-color: rgba(255,255,255,0.8); /* White background with opacity */
 }
 
-/* from Bulma */
+/* From Bulma */
 .icon {
     align-items: center;
     display: inline-flex;
@@ -31,21 +31,22 @@ body {
     width: fit-content;
 }
 
+/* Buttons */
 .shop-now-button {
-    background: black;
+    background: #6a1b9a;
     color: white;
     min-width: 260px;
 }
 
 .btn-black {
-    background: black;
+    background: #6a1b9a;
     color: white;
 }
 
 .btn-outline-black {
     background: white;
-    color: black !important;
-    border: 1px solid black;
+    color: #6a1b9a
+    border: 2px solid #6a1b9a;
 }
 
 .shop-now-button:hover,
@@ -54,7 +55,7 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
+    background: #4a148c;
     color: white;
 }
 
@@ -80,31 +81,30 @@ body {
     z-index: -1;
 }
 
+/* Category Badge */
 a.category-badge > span.badge:hover {
-    background: #212529 !important;
+    background: #6a1b9a !important;
     color: #fff !important;
 }
 
+/* Scroll to Top Button */
 .btt-button {
     height: 42px;
     width: 42px;
     position: fixed;
     bottom: 10px;
     right: 10px;
+    background: #6a1b9a;
+    border-radius: 50%;
+    color: white;
 }
 
-.btt-link,
-.update-link,
-.remove-item {
-    cursor: pointer;
-}
-
+/* Input Placeholder */
 input[name='q']::placeholder {
     color: #aab7c4;
 }
 
-/* ------------------------------- bootstrap toasts */
-
+/* Toast Notifications */
 .message-container {
     position: fixed;
     top: 72px;
@@ -120,81 +120,27 @@ input[name='q']::placeholder {
     height: 2px;
 }
 
-/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
-
+/* Arrow Styles */
 .arrow-up {
     width: 0; 
     height: 0; 
     border-left: 4px solid transparent;
     border-right: 4px solid transparent; 
-    border-bottom: 10px solid black;
+    border-bottom: 10px solid #6a1b9a;
     position: absolute;
     top: -10px;
     right: 36px;
 }
 
-/* Convenience classes - colors copied from Bootstrap */
-.arrow-primary {
-    border-bottom-color: #007bff !important;
-}
-
-.arrow-secondary {
-    border-bottom-color: #6c757d !important;
-}
-
-.arrow-success {
-    border-bottom-color: #28a745 !important;
-}
-
-.arrow-danger {
-    border-bottom-color: #dc3545 !important;
-}
-
-.arrow-warning {
-    border-bottom-color: #ffc107 !important;
-}
-
-.arrow-info {
-    border-bottom-color: #17a2b8 !important;
-}
-
-.arrow-light {
-    border-bottom-color: #f8f9fa !important;
-}
-
-.arrow-dark {
-    border-bottom-color: #343a40 !important;
-}
-
-.bag-notification-wrapper {
-    height: 100px;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-/* -------------------------------- Media Queries */
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
-}
-
-/* Allauth form formatting */
-
+/* Form Styles */
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
     color: #6c757d; /* text-secondary */
 }
 
 .allauth-form-inner-content input {
-    border-color: #000;
+    border-color: #6a1b9a;
     border-radius: 0;
-}
-
-.allauth-form-inner-content label:not([for='id_remember']) {
-    display: none;
 }
 
 .allauth-form-inner-content input::placeholder {
@@ -203,40 +149,23 @@ input[name='q']::placeholder {
 
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
-	/* btn */
-	display: inline-block;
-    font-weight: 400;
-    color: #fff;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: #000;
-    border: 1px solid #000;
+    background-color: #6a1b9a;
+    border: 1px solid #6a1b9a;
+    color: white;
     padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 0;
-
-    /* standard bootstrap btn transitions */
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 .allauth-form-inner-content button:hover,
-.allauth-form-inner-content input[type='submit']:hover {	
-	color: #fff;
-    background-color: #222;
-    border-color: #222;
+.allauth-form-inner-content input[type='submit']:hover {  
+    background-color: #4a148c;
+    border-color: #4a148c;
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+    color: #6a1b9a;
 }
 
 /* Product Form */
-
 .btn-file {
     position: relative;
     overflow: hidden;
@@ -254,12 +183,12 @@ input[name='q']::placeholder {
 
 .custom-checkbox .custom-control-label::before {
     border-radius: 0;
-    border-color: #dc3545;
+    border-color: #6a1b9a;
 }
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #dc3545;
-    border-color: #dc3545;
+    background-color: #6a1b9a;
+    border-color: #6a1b9a;
     border-radius: 0;
 }
 
@@ -268,19 +197,13 @@ footer {
     height: calc(88px -100vh);
     position: fixed;
     bottom: 0px;
-    background-color: #000;
+    background-color: #6a1b9a;
     text-align: center;
     padding-bottom: 10px;
+    color: white;
 }
 
-#mc_embed_signup {
-    background:#fff;
-    clear:left;
-    font:14px Helvetica,Arial,sans-serif;
-    width: 600px;
-}
-
-/* fixed top navbar only on medium and up */
+/* Fixed Top Navbar */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
@@ -295,18 +218,6 @@ footer {
     }
 }
 
-/* pad the top a bit when navbar is collapsed on mobile */
-@media (max-width: 991px) {
-    .header-container {
-        padding-top: 116px;
-    }
-
-    body {
-        height: calc(100vh - 116px);
-    }
-}
-
-/* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
         padding-top: 116px;
