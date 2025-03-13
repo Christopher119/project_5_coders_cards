@@ -126,35 +126,13 @@ def delete_blog_post(request, slug):
 
 # -------------------COMMENT VIEWS-------------------
 @login_required
-def add_comment(request):
-    """ Add a new comment """
-    if request.method == 'POST':
-        form = CommentForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Successfully added product!')
-            return redirect(reverse('blog'))
-        else:
-            messages.error(request, 'Failed to add blog post. Please ensure the form is valid.')
-    else:
-        form = CommentForm()
-
-    template = 'blog/add_comment.html'
-    context = {
-        'form': form,
-    }
-
-    return render(request, template, context)
-
-
-@login_required
 def edit_comment(request, slug, comment_id):
     """ Edit a blog post """
     blog_post = get_object_or_404(BlogPost, slug=slug)
     comment = get_object_or_404(Comment, pk=comment_id)
     if comment.commenter == request.user:
         comment.save()
-        messages.success(request, 'Comment deleted!')
+        messages.success(request, 'Comment updated!')
     else:
         messages.add_message(request, messages.ERROR,
                              'You can only edit your own reviews!')
