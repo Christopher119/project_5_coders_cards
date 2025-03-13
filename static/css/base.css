@@ -263,6 +263,16 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+footer {
+    width: 100%;
+    height: calc(88px -100vh);
+    position: fixed;
+    bottom: 0px;
+    background-color: #000;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
