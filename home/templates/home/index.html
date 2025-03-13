@@ -2,35 +2,37 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col">
+<div class="container header-container">
+    <div class="row">
+        <div class="col">
 
-            </div>
         </div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto body-overlay">
-                <h1 class ="display-4 logo-font text-black">
-                    Coder's Cards
-                </h1>
-                <h2>Coding Trading Card Shop in Dublin</h2>
+<div class="container h-100">
+    <div class="row h-100">
+        <div class="col-7 col-md-6 my-auto body-overlay">
+            <h1 class="display-4 logo-font text-black">
+                Coder's Cards
+            </h1>
+            <h2>Coding Trading Card Shop in Dublin</h2>
+            <br>
+            <p>We are a Dublin based <strong>Coding Trading Card Game</strong> store.<br>
+                We promote a friendly atmosphere for <strong>Coders</strong>, <strong>Developers</strong>, and
+                <strong>Students</strong>.
                 <br>
-                <p>We are a Dublin based <strong>Coding Trading Card Game</strong> store.<br>
-                    We promote a friendly atmosphere for <strong>Coders</strong>, <strong>Developers</strong>, and <strong>Students</strong>.
-                    <br>
-                    <strong>Trading Card Tournaments</strong> are hosted regularly in the shop that are free to sign up for.
-                </p>
-                <div class="my-5">
-                    <h4>
-                        <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
-                    </h4>
-                </div>
+                <strong>Trading Card Tournaments</strong> are hosted regularly in the shop that are free to sign up for.
+            </p>
+            <div class="my-5">
+                <h4>
+                    <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop
+                        Now</a>
+                </h4>
             </div>
         </div>
     </div>
+</div>
 {% endblock %}
