@@ -35,7 +35,7 @@ def blog_post(request, slug):
 
 # -------------------BLOG POST VIEWS-------------------
 @login_required
-def add_blog_post(request):
+def add_blog_posts(request):
     """ Add a new blog post """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that')
@@ -48,11 +48,12 @@ def add_blog_post(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('blog'))
         else:
-            messages.error(request, 'Failed to add blog post. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add blog post. '
+                           'Please ensure the form is valid.')
     else:
         form = BlogForm()
 
-    template = 'blog/add_blog_post.html'
+    template = 'blog/add_blog_posts.html'
     context = {
         'form': form,
     }

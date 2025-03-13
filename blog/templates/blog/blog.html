@@ -16,6 +16,10 @@
             <div class="col text-center mt-3">
                 <h2 class="logo-font">Blog Posts</h2>
                 <hr class="w-50 mb-1">
+                {% if request.user.is_superuser %}
+                  <a href="{% url 'add_blog_posts' %}">New Blog Post</a>
+                {% endif %}
+                <hr class="w-50 mb-1">
             </div>
         </div>
         <div class="row">

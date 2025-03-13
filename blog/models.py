@@ -1,5 +1,6 @@
 from django.db import models
 from profiles.models import UserProfile
+from django.utils.text import slugify
 
 
 APPROVAL = ((0, "Awaiting Moderation"), (1, "Approved"))
@@ -18,6 +19,10 @@ class BlogPost (models.Model):
 
     def __str__(self):
         return f'Blog Post: {self.title} Posted by: {self.author}'
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        super(BlogPost, self).save(*args, **kwargs)
 
 
 class Comment (models.Model):
